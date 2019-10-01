@@ -7,6 +7,10 @@ body {
     margin: 0 auto;
 }
 
+button {
+    cursor: pointer;
+}
+
 .btn {
     padding: 8px 45px;
     border: 3px solid #FFFFFF;
@@ -15,10 +19,15 @@ body {
     /*box-sizing: border-box;*/
     font-size: 18px;
     color: white;
+    transition: 1s all;
 }
 
+.btn:hover {
+    background-color: white;
+    color: black;
+}
 
-/* Nawigacja */
+/* Navigation*/
 nav {
     position: fixed;
     width: 100%;
@@ -61,7 +70,6 @@ nav .container {
     background-size: cover;
     background-position: center;
     color: white;
-
 }
 
 .landing-page-shadow {
@@ -84,7 +92,6 @@ nav .container {
     width: 60%;
     height: 30%;
     font-weight: bold;
-   
 }
 
 .landing-page-text h1 {
@@ -92,5 +99,83 @@ nav .container {
 }
 
 .landing-page-text h2 {
+    font-size: 18px;
+}
+
+/* About us */
+
+.our-crew {
+    padding: 50px 0;
+    background-color: #F1F1F1;
+    color: black;
+}
+.our-crew h1 {
+    margin-bottom: 50px;
+    color: #152D41;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.employee {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.employee:last-of-type {
+    margin-bottom: 0;
+}
+
+.employee:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.employee:nth-of-type(even) .employee-photo {
+    margin-right: 0;
+    margin-left: 50px;
+}
+
+.employee:nth-of-type(even) .employee-text {
+    text-align: right;
+}
+
+.employee-photo {
+    margin-right: 50px;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.employee-text {
+    font-size: 18px;
+}
+
+.employee-text h3 {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Offer*/
+
+.offer {
+    background: #405D78;
+    padding: 50px 0;
+}
+
+.box-container {
+    width: 75%;
+    height: 50px;
+    background-color: aqua;
+    margin: 0 auto;
+}
+
+/* Contact*/
+
+
+/* Footer*/
+
+footer {
+    background: #4E4E4E;
     font-size: 18px;
 }
