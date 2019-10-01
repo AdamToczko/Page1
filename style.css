@@ -3,13 +3,11 @@ body {
 }
 
 .container {
-    width: 960px;
+    width: 94%;
     margin: 0 auto;
 }
 
-button {
-    cursor: pointer;
-}
+
 
 .btn {
     padding: 8px 45px;
@@ -19,12 +17,6 @@ button {
     /*box-sizing: border-box;*/
     font-size: 18px;
     color: white;
-    transition: 1s all;
-}
-
-.btn:hover {
-    background-color: white;
-    color: black;
 }
 
 /* Navigation*/
@@ -39,17 +31,10 @@ nav a {
     color: #F1F1F1;
     text-decoration: none;
 }
+
 nav .container > a {
     font-weight: bold;
     color: #FFFFFF;
-}
-
-.nav-right a {
-    margin-left: 45px;
-}
-
-.nav-right a:first-of-type {
-    margin-left: 0;
 }
 
 nav .container {
@@ -57,6 +42,10 @@ nav .container {
     justify-content: space-between;
     align-items: center;
     height: 50px;
+}
+
+.nav-right {
+    display: none;
 }
 
 /* Landing Page */
@@ -164,10 +153,46 @@ nav .container {
 }
 
 .box-container {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: auto;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
     width: 75%;
-    height: 50px;
     background-color: aqua;
     margin: 0 auto;
+}
+
+.box-container > div:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    background: red;
+}
+
+.box-container > div {
+    position: relative;
+}
+
+.box-container .service {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dot {
+    position: absolute;
+    top: -3%;
+    left: -3%;
+    width: 5%;
+    height: 5%;
+    background: #E07A64;
+    border-radius: 50%;
+
 }
 
 /* Contact*/
@@ -178,4 +203,34 @@ nav .container {
 footer {
     background: #4E4E4E;
     font-size: 18px;
+}
+
+/* responsiveness*/
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 960px;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    .btn {
+        transition: 1s all;
+    }
+
+    .btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .nav-right a {
+        margin-left: 45px;
+    }
+    
+    .nav-right a:first-of-type {
+        margin-left: 0;
+    }
+
 }
