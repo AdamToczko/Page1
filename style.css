@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    width: 94%;
+    width: 93%;
     margin: 0 auto;
 }
 
@@ -23,6 +23,7 @@ nav {
     width: 100%;
     background: #4E4E4E;
     font-size: 18px;
+    z-index:3;
 }
 
 nav a {
@@ -42,8 +43,15 @@ nav .container {
     height: 50px;
 }
 
-.nav-right a {
+.nav-right {
     display: none;
+}
+
+.nav-toggler {
+    background: none;
+    border: none;
+    color: #F1F1F1;
+    font-size: 18px;
 }
 
 /* Landing Page */
@@ -76,8 +84,7 @@ nav .container {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    width: 60%;
-    height: 30%;
+    height: 50%;
     font-weight: bold;
 }
 
@@ -155,7 +162,7 @@ nav .container {
     grid-template-rows: auto;
     grid-column-gap: 10%;
     grid-row-gap: 10%;
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -228,10 +235,33 @@ nav .container {
 /* Footer*/
 
 footer {
+    display: flex;
+    justify-content: space-between;
     background: #4E4E4E;
     font-size: 18px;
     font-weight: bold;
     color: #FFFFFF;
+}
+
+footer .container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.social-icon {
+    display: flex;
+    justify-content: flex-end;
+    background: none;
+    border: none;
+    color: #F1F1F1;
+    font-size: 30px;  
+    margin-right: 50px;
+}
+
+.social-icon:first-of-type {
+    margin-right: 0;
 }
 
 /* responsiveness*/
@@ -255,6 +285,10 @@ footer {
     }
 
     .nav-right {
+        display: unset;
+    }
+
+    .nav-right a {
         margin-left: 45px;
     }
     
@@ -262,4 +296,11 @@ footer {
         margin-left: 0;
     }
 
+    .nav-toggler {
+        display: none;
+    }
+    
+    .landing-page-text {
+        width: 60%;
+    }
 }
