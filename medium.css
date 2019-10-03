@@ -1,0 +1,45 @@
+.container {
+    width: 960px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn {
+    transition: 1s all;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.nav-right {
+    display: unset;
+}
+
+.nav-right a {
+    margin-left: 45px;
+}
+
+.nav-right a:first-of-type {
+    margin-left: 0;
+}
+
+.nav-toggler {
+    display: none;
+}
+
+.landing-page-text {
+    width: 60%;
+}
+
+.our-crew h1 {
+    text-align: left;
+}
+
+iframe {
+    width: 300px;
+    height: 300px;
+}

@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    width: 93%;
+    width: 94%;
     margin: 0 auto;
 }
 
@@ -103,6 +103,7 @@ nav .container {
     color: black;
 }
 .our-crew h1 {
+    text-align: center;
     margin-bottom: 50px;
     color: #152D41;
     font-size: 36px;
@@ -111,33 +112,17 @@ nav .container {
 
 .employee {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
 }
 
-.employee:last-of-type {
-    margin-bottom: 0;
-}
-
-.employee:nth-of-type(even) {
-    flex-direction: row-reverse;
-}
-
-.employee:nth-of-type(even) .employee-photo {
-    margin-right: 0;
-    margin-left: 50px;
-}
-
-.employee:nth-of-type(even) .employee-text {
-    text-align: right;
-}
-
 .employee-photo {
-    margin-right: 50px;
     width: 200px;
     height: 200px;
     flex-shrink: 0;
     border-radius: 50%;
+    margin-bottom: 20px;
 }
 
 .employee-text {
@@ -158,12 +143,11 @@ nav .container {
 
 .box-container {
     display: grid;
-    grid-template-columns: 22% 22% 22%;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
-    grid-column-gap: 10%;
-    grid-row-gap: 10%;
+    grid-row-gap: 2%;
     width: 70%;
-    margin: 0 auto;
+    margin: 0 auto 100px auto;
 }
 
 .box-container > div:after {
@@ -219,7 +203,6 @@ nav .container {
 .contact-text {
     font-size: 18px;
     line-height: 35px;
-    float: right;
 }
 
 .contact h1 {
@@ -235,8 +218,7 @@ nav .container {
 /* Footer*/
 
 footer {
-    display: flex;
-    justify-content: space-between;
+    
     background: #4E4E4E;
     font-size: 18px;
     font-weight: bold;
@@ -244,63 +226,25 @@ footer {
 }
 
 footer .container {
-    height: 50px;
+    height: 100px;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    
     
 }
 
 .social-icon {
-    display: flex;
-    justify-content: flex-end;
     background: none;
     border: none;
     color: #F1F1F1;
     font-size: 30px;  
     margin-right: 50px;
+    
 }
 
 .social-icon:first-of-type {
     margin-right: 0;
-}
-
-/* responsiveness*/
-
-@media screen and (min-width: 1024px) {
-    .container {
-        width: 960px;
-    }
-
-    button {
-        cursor: pointer;
-    }
-
-    .btn {
-        transition: 1s all;
-    }
-
-    .btn:hover {
-        background-color: white;
-        color: black;
-    }
-
-    .nav-right {
-        display: unset;
-    }
-
-    .nav-right a {
-        margin-left: 45px;
-    }
-    
-    .nav-right a:first-of-type {
-        margin-left: 0;
-    }
-
-    .nav-toggler {
-        display: none;
-    }
-    
-    .landing-page-text {
-        width: 60%;
-    }
-}
+    margin-left: 100px;
+} 
