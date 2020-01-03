@@ -1,3 +1,1 @@
-# Pierwszy projekt zaliczeniowy
-
-Strona według projektu 
+# Static page in accordance with guidelines
